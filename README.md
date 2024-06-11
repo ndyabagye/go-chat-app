@@ -5,7 +5,7 @@ A fullstack chat application with the backend built using GOLANG, GIN and the fr
 ## Getting started
 ----
 
-> BACKEND
+> Backend
 
 1. Clone the repo.
 2. `cd go-chat-app-backend`
