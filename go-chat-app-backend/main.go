@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"go-chat-app-backend/cmd"
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -47,6 +48,11 @@ func main() {
 	//Login endpoint
 	r.POST("/login", func(c *gin.Context) { cmd.Login(c, db) })
 
+	//We are telling go where to find the frontend files
+	//Explicitly serve index.html at the root
+	r.StaticFile("/", "../go-chat-app-frontend/dist/index.html")
+	//Serve static files under /assets
+	r.StaticFS("/assets", http.Dir("../go-chat-app-frontend/dist/assets"))
 	err = r.Run(":8080")
 	if err != nil {
 		log.Fatal(err)

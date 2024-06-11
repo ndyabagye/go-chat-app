@@ -38,7 +38,7 @@ const Login = () =>{
                 </div>
                 <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded-md">Log In</button>
                 <div className="mt-4 text-center">
-                    <span className="text-sm text-gray-600">Don&amp;apos;t  have an account ?</span>
+                    <span className="text-sm text-gray-600">Don&apos;t  have an account? </span>
                     <a href="/create-user" className="text-blue-500 hover:underline">Create One</a>
                 </div>
             </form>

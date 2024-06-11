@@ -34,7 +34,7 @@ func CreateMessage(c *gin.Context, db *sql.DB) {
 
 func ListMessages(c *gin.Context, db *sql.DB) {
 	//parse channel ID from URL
-	channelID, err := strconv.Atoi(c.Query("ChannelID"))
+	channelID, err := strconv.Atoi(c.Query("channelID"))
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return

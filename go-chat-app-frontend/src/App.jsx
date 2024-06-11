@@ -1,11 +1,20 @@
 import './index.css'
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import CreateUser from "./CreateUser";
+import MainChat from "./MainChat.jsx";
+import Login from "./Login.jsx";
 
 function App() {
 
   return (
-    <>
-      <h2 className="text-red-500 text-lg text-4xl text-center font-bold">Hello world</h2>
-    </>
+      <Router>
+          <Routes>
+              <Route path="/create-user" element={<CreateUser />} />
+              <Route path="/chat" element={<MainChat />} />
+              <Route path="/chat/:channelId" element={<MainChat />} />
+              <Route path="/" element={<Login />} />
+          </Routes>
+      </Router>
   )
 }
 

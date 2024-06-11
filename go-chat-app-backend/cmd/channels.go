@@ -59,7 +59,7 @@ func ListChannels(c *gin.Context, db *sql.DB) {
 		//append channel into slice
 		channels = append(channels, channel)
 
-		//return slice of channels
-		c.JSON(http.StatusOK, channels)
 	}
+	//return slice of channels
+	c.JSON(http.StatusOK, channels)
 }
